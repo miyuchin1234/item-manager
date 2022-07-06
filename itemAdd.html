@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zaicokanri</title>
+  <link href="./css/itemAdd-style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <p class="title">Zaico kanri</p>
+    <nav class="nav">
+      <ul class="menu-group">
+        <li class="menu-item"><a href="./itemAdd.html">アイテム登録</a></li>
+        <li class="menu-item"><a href="./index.html">アイテム一覧</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="item-group">
+      <div class="item-data">
+        <h2>アイテム登録</h2>
+          <div class="input-data">
+            <input type="text" id="input-category" placeholder="   カテゴリ" required>
+            <input type="text" id="input-name" placeholder="   アイテム名">
+            <input type="text" id="input-sku" placeholder="   SKU">
+            <input type="text" id="input-manufacturer" placeholder="   製造元">
+            <input type="text" id="input-releaseDate" placeholder="   発売日">
+            <input type="text" id="input-price" placeholder="   定価">
+          </div>
+          <button id="add-btn">登録</button>
+      </div>  
+    </div>
+  </main>
+  <script src="./js/common.js"></script>
+  <script src="./js/add.js"></script>
+</body>
+</html>

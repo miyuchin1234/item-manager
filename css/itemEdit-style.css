@@ -1,0 +1,114 @@
+* {
+  margin: 0px;
+  padding: 0px;   
+}
+
+header {
+  background-color:rgba(245,206,132,0.5);
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  line-height: 64px;
+}
+
+.title {
+  padding-left: 100px;
+  font-size: 24px;
+  opacity: 0.5;
+}
+
+.menu-group {
+  display: flex;
+}
+
+.menu-item {
+  list-style: none;
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.item-group {
+  width: 640px;
+  margin: 8px auto 8px;
+  height: 576px;
+  border: 1px solid;
+  border-radius: 10px;
+  color: rgba(0,14,0,0.2);
+}
+
+.item-data {
+  text-align: center;
+}
+
+.item-data h2 {
+  margin: 32px 0px 18px;
+  color: black;
+}
+
+.input-data {
+  display: flex;
+  flex-flow: column; 
+}
+
+.input-data input {
+  width: 400px;
+  margin: 14px auto 0px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.item-input {
+  border: solid;
+  border-width: thin;
+  color: rgb(118, 118, 118);
+  border-radius: 2px;
+  position: relative;
+  width: 400px;
+  height: 40px; 
+  margin: 12px auto
+} 
+
+.item-input::before {
+  background-color: #fff;
+  left: 16px;
+  padding: 3px 5px 0px;
+  position: absolute;
+  top: -12px;
+  font-size: 12px;
+}
+
+.category::before {
+  content: "カテゴリ";
+}
+
+.name::before {
+  content: "アイテム名";
+}
+
+.manufacturer::before {
+  content: "製造元";
+}
+
+.releaseDate::before {
+  content: "発売日";
+}
+
+.price::before {
+  content: "定価";
+}
+
+.item-input:focus-within {
+  border-width: 2px;
+  border-color: black;
+}
+
+input {
+  text-align: center;
+}
+
+#update-btn {
+margin-top: 15px;
+width: 60px;
+height: 40px;
+}

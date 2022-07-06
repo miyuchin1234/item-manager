@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zaicokanri</title>
+  <link href="./css/items-style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <p class="title">Zaico kanri</p>
+    <nav class="nav">
+      <ul class="menu-group">
+        <li class="menu-item"><a href="./itemAdd.html">アイテム登録</a></li>
+        <li class="menu-item"><a href="./index.html">アイテム一覧</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="item-group">
+      <div class="item-data">
+        <h2>アイテム詳細</h2>
+          <table class="item-table">
+            <tr>
+              <td class="item-list">カテゴリ</td>
+              <td class="item-detail" id="list-category">カテゴリ</td>
+            </tr>
+            <tr>
+              <td class="item-list">アイテム名</td>
+              <td class="item-detail" id="list-name">アイテム名</td>
+            </tr>
+            <tr>
+              <td class="item-list">SKU</td>
+              <td class="item-detail" id="list-sku">SKU</td>
+            </tr>
+            <tr>
+              <td class="item-list">製造元</td>
+              <td class="item-detail" id="list-manufacturer">製造元</td>
+            </tr>
+            <tr>
+              <td class="item-list">発売日</td>
+              <td class="item-detail" id="list-releaseDate">発売日</td>
+            </tr>
+            <tr>
+              <td class="item-list" >定価</td>
+              <td class="item-detail" id="list-price">定価</td>
+            </tr>
+          </table>
+      </div>  
+    </div>
+  </main>
+  <script src="./js/common.js"></script>
+  <script src="./js/items.js"></script>
+</body>
+</html>

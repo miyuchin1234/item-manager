@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zaicokanri</title>
+  <link href="./css/index.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <p class="title">Item Manager</p>
+    <nav class="nav">
+      <ul class="menu-group">
+        <li class="menu-item"><button id="test-data-btn">テストデータ読込</button></li>
+        <li class="menu-item"><a href="./itemAdd.html">アイテム登録</a></li>
+        <li class="menu-item"><a href="#">アイテム一覧</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sideMenu">
+        <div class="side-title">カテゴリ</div>
+        <div class="item-category">
+          <label for="checkbox1"><input type="checkbox" id="checkbox1" name="category" value="book">  本</label>
+          <label for="checkbox2"><input type="checkbox" id="checkbox2" name="category" value="consumer-electronics">  家電</label>
+          <label for="checkbox3"><input type="checkbox" id="checkbox3" name="category" value="food">  食品</label>
+          <label for="checkbox4"> <input type="checkbox" id="checkbox4" name="category" value="fashion">  ファッション</label>
+        </div>
+      </div>
+      <hr>
+      <div class="sideMenu">
+        <div class="side-title">商品価格</div>
+        <div class="item-price">
+          <input type="text" id="min-price" class="price-input"><p>円</p>
+          <p class="space">～</p>
+          <input type="text" id="max-price" class="price-input"><p>円</p>
+        </div>
+        <div>
+          <button id="price-search">検索</button>
+        </div>
+      </div>
+      <hr>
+      <div class="sideMenu">
+        <div class="side-title">文字検索</div>
+        <div class="search-word">
+          <input type="text" id="input-word" class="detail">
+        </div>
+        <div class="detail-search">
+          <button id="word-search">検索</button>
+        </div>
+        </div>
+      </div>
+      <main>
+        <div class="display-Count">
+          <label for="number">表示件数</label>
+            <select name="number" id="display-Count">
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+        </div>
+        <table id="list-table">
+          <thead>
+            <tr>
+              <th class="item-thead">カテゴリ</th>
+              <th class="item-thead">アイテム名</th>
+              <th class="item-thead">SKU</th>
+              <th class="item-thead">製造元</th>
+              <th class="item-thead">発売日</th>
+              <th class="item-thead">定価</th>
+              <th class="item-thead">アクション</th>
+            </tr>
+          </thead>
+          <tbody id="item-list">
+          </tbody>
+        </table>
+        <p id="noItem-message">現在在庫はありません。</p>
+        <ul id="paginaiton"></ul>
+      </main>
+  </div>
+  <script src="./js/common.js"></script>
+  <script src="./js/seeders.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
