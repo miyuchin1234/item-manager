@@ -23,11 +23,11 @@ header {
 
 .menu-item {
   list-style: none;
-  text-decoration: none;
   padding-right: 50px;
 }
 .menu-item a {
   color: rgb(0, 0, 238);
+  text-decoration: none;
 }
 
 #test-data-btn {
@@ -167,6 +167,7 @@ tbody tr {
 
 #item-list a {
   color: rgb(0, 0, 238);
+  text-decoration: none;
 }
 
 #item-list button {
