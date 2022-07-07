@@ -4,7 +4,7 @@
 }
 
 header {
-  background-color:rgba(245,206,132,0.5);
+  background-color:rgba(211, 230, 241, 0.5);
   display: flex;
   justify-content: space-between;
   height: 64px;
@@ -27,10 +27,13 @@ header {
   padding-right: 50px;
 }
 
+.menu-item a {
+  color: rgb(0, 0, 238);
+}
+
 .item-group {
   width: 640px;
   margin: 8px auto 8px;
-  height: 424px;
   border: 1px solid;
   border-radius: 10px;
   color: rgba(0,14,0,0.2);
@@ -47,7 +50,7 @@ header {
 
 .item-table {
   border-collapse:collapse;
-  margin: 0px auto;
+  margin: 0px auto 32px;
 }
 
 .item-list {
@@ -67,7 +70,6 @@ header {
   font-size: 16px;
   text-align: left;
 }
-
 .item-table tr {
   color: black;
   border-bottom: solid;
@@ -75,7 +77,6 @@ header {
   border-color: rgba(0,14,0,0.2);
   margin: 0px auto;
 }
-
 .item-table tr:last-child {
   border-bottom: none;
 }

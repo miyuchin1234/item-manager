@@ -4,7 +4,7 @@
 }
 
 header {
-  background-color:rgba(245,206,132,0.5);
+  background-color:rgba(211, 230, 241, 0.5);
   display: flex;
   justify-content: space-between;
   height: 64px;
@@ -25,6 +25,25 @@ header {
   list-style: none;
   text-decoration: none;
   padding-right: 50px;
+}
+.menu-item a {
+  color: rgb(0, 0, 238);
+}
+
+#test-data-btn {
+  color: rgb(73, 72, 72);
+  width: 136px;
+  height: 40px;
+  background-color: rgba(179, 221, 245, 0.5);
+  border-color: rgba(0,14,0,0.2);
+  border-width: 1px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+#test-data-btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 .sidebar {
@@ -146,6 +165,10 @@ tbody tr {
   margin-top: 24px;
 }
 
+#item-list a {
+  color: rgb(0, 0, 238);
+}
+
 #item-list button {
   width: 50px;
   margin-left: 8px;
@@ -163,5 +186,7 @@ tbody tr {
 }
 
 .active {
-  background-color: rgb(243, 124, 179);
+  background-color: rgba(127, 202, 245, 0.5);
+  border-width: thin;
+  border-color: rgb(73, 72, 72);
 }
