@@ -1,5 +1,5 @@
 ## 【URL】
-URL: 
+URL: https://item-manager-6f0a3.web.app/
 
 ## 【概要】
 Javascriptのみで作成した在庫管理アプリ
@@ -17,7 +17,8 @@ Javascriptのみで作成した在庫管理アプリ
   - 数値範囲
   - 文字検索
 <br>
-<br>         
+<br>  
+       
 ## 【技術】
 ### 開発環境
 - Windows11 
