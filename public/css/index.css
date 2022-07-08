@@ -4,11 +4,12 @@
 }
 
 header {
-  background-color:rgba(211, 230, 241, 0.5);
+  background-color:rgb(241, 244, 245);
   display: flex;
   justify-content: space-between;
   height: 64px;
   line-height: 64px;
+  
 }
 
 .title {
@@ -19,11 +20,13 @@ header {
 
 .menu-group {
   display: flex;
+  
 }
 
 .menu-item {
   list-style: none;
   padding-right: 50px;
+  
 }
 .menu-item a {
   color: rgb(0, 0, 238);
@@ -39,6 +42,7 @@ header {
   border-width: 1px;
   border-radius: 2px;
   font-weight: bold;
+  margin: 0px;
 }
 
 #test-data-btn:hover {
@@ -69,11 +73,6 @@ label {
   display: block;
   margin-bottom: 8px;
   line-height: 32px;
-}
-
-label:hover {
-  cursor: pointer;
-  opacity: 0.6;
 }
 
 hr {
@@ -132,25 +131,36 @@ main {
   color: rgba(0,14,0,0.2);
 }
 
-.display-Count {
+.item-display-Count {
   color: black;
   margin-left: 96px;
 }
+.item-display-Count label {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
 
-table {
+#display-Count {
+  height: 32px;
+  width: 64px;
+  font-size: 16px;
+}
+
+#list-table {
   border: 1px solid;
-  margin: 24px auto 8px;
+  margin: 16px auto 8px;
   border-radius: 10px;
 }
 
 .item-thead {
   padding-top: 32px;
   padding-left: 24px;
+  padding-bottom: 16px;
 }
 
 th,td {
   color: black;
-  padding: 8px 16px;
+  padding: 0px 16px;
   line-height: 10px; 
 }
 
@@ -190,4 +200,18 @@ tbody tr {
   background-color: rgba(127, 202, 245, 0.5);
   border-width: thin;
   border-color: rgb(73, 72, 72);
+}
+
+footer {
+  background-color:rgb(241, 244, 245);
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+}
+
+.copyright {
+  font-size: 16px;
+  opacity: 0.5;
 }

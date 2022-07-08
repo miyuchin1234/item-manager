@@ -3,8 +3,12 @@
   padding: 0px;   
 }
 
+html,body {
+  height: 100%;
+}
+
 header {
-  background-color:rgba(211, 230, 241, 0.5);
+  background-color:rgb(241, 244, 245);
   display: flex;
   justify-content: space-between;
   height: 64px;
@@ -116,4 +120,18 @@ margin-top: 15px;
 width: 60px;
 height: 40px;
 margin-bottom: 32px;
+}
+
+footer {
+  background-color:rgb(241, 244, 245);
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  position: sticky;
+  top: 100vh;
+}
+
+.copyright {
+  font-size: 16px;
+  opacity: 0.5;
 }
