@@ -10,7 +10,7 @@ const listPrice = document.getElementById('list-price');
 
 loadAllItems();
 
-const initpage = () => {
+const initPage = () => {
   let url = new URL(window.location.href);
   let params = url.searchParams;
   let getSku = params.get('sku');
@@ -28,4 +28,4 @@ const initpage = () => {
   });
 };
 
-initpage();
+initPage();
