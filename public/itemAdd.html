@@ -22,12 +22,18 @@
       <div class="item-data">
         <h2>アイテム登録</h2>
           <div class="input-data">
-            <input type="text" id="input-category" placeholder="   カテゴリ" required>
-            <input type="text" id="input-name" placeholder="   アイテム名">
-            <input type="text" id="input-sku" placeholder="   SKU">
-            <input type="text" id="input-manufacturer" placeholder="   製造元">
-            <input type="text" id="input-releaseDate" placeholder="   発売日">
-            <input type="text" id="input-price" placeholder="   定価">
+            <input type="text" id="input-category" data-prop="category" placeholder="   カテゴリ" required>
+            <p id="category-message" style="color:red;"></p>
+            <input type="text" id="input-name" data-prop="name" placeholder="   アイテム名">
+            <p id="name-message" style="color:red;"></p>
+            <input type="text" id="input-sku" data-prop="sku" placeholder="   SKU">
+            <p id="sku-message" style="color:red;"></p>
+            <input type="text" id="input-manufacturer" data-prop="manufacturer" placeholder="   製造元">
+            <p id="manufacturer-message" style="color:red;"></p>
+            <input type="text" id="input-releaseDate" data-prop="releaseDate" placeholder="   発売日">
+            <p id="releaseDate-message" style="color:red;"></p>
+            <input type="number" id="input-price" data-prop="price" placeholder="   定価">
+            <p id="price-message" style="color:red;"></p>
           </div>
           <button id="add-btn">登録</button>
       </div>  
@@ -37,6 +43,7 @@
     <p class="copyright">&copy; 2022 Item Manager </p>
   </footer>
   <script src="./js/common.js"></script>
+  <script src="./js/validate.js"></script>
   <script src="./js/add.js"></script>
 </body>
 </html>

@@ -1,11 +1,7 @@
 'use strict';
 
 let allItems = [];
-
-const initPage = () => {
-  loadAllItems();
-};
-initPage();
+let item = {};
 
 const inputCategory = document.getElementById('input-category');
 const inputName = document.getElementById('input-name');
@@ -16,30 +12,22 @@ const inputPrice = document.getElementById('input-price');
 const inputDates = document.querySelectorAll('input[type="text"]');
 const addBtn = document.getElementById('add-btn');
 
+const initPage = () => {
+  loadAllItems();
+};
+initPage();
+
 const addItem = () => {
-  if(inputCategory.value !== '' && inputName.value !== '' && inputSku.value !== '' && inputManufacturer.value !== '' && inputReleaseDate.value !== '' && inputPrice.value !== ''){
-    const newItem = {};
-    newItem.sku = inputSku.value;
-    newItem.category = inputCategory.value;
-    newItem.name = inputName.value;
-    newItem.manufacturer = inputManufacturer.value;
-    newItem.releaseDate = inputReleaseDate.value;
-    newItem.price = inputPrice.value;
-    allItems.push(newItem);
-    console.log('=== newItem ===', newItem);
-    console.log('=== allItems ===', allItems);
-    alert('登録しました');
+  if (validate(item, createRules)) {
+    console.log('バリデーション成功')
+    allItems.push(item);
+    alert('商品を登録しました');
     saveAllItems();
     clearForm();
-  }else {
-    alert('全て入力して下さい');
-    console.log('=== allitemsをセーブできませんでした ===', allItems);
-  };
+  } else {
+    alert('入力に不備があります。')
+  }
 };
-
-addBtn.addEventListener('click', () => {
-  addItem();
-});
 
 const clearForm = () => {
   inputCategory.value = '';
@@ -49,3 +37,17 @@ const clearForm = () => {
   inputReleaseDate.value = '';
   inputPrice.value = '';
 };
+
+document.addEventListener('change',(e) => {
+  const prop = e.target.getAttribute('data-prop');
+  if (prop === 'price') {
+    item[prop] = parseInt(e.target.value)
+  } else {
+    item[prop] = e.target.value
+  }
+  console.log('== item ====',item);
+});
+
+addBtn.addEventListener('click', () => {
+  addItem();
+});

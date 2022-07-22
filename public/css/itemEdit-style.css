@@ -74,7 +74,7 @@ header {
   position: relative;
   width: 400px;
   height: 40px; 
-  margin: 12px auto
+  margin: 20px auto
 } 
 
 .item-input::before {
@@ -109,6 +109,11 @@ header {
 .item-input:focus-within {
   border-width: 2px;
   border-color: black;
+}
+
+.item-input p {
+  color: red;
+  margin-top: 10px;
 }
 
 input {

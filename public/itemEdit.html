@@ -23,20 +23,25 @@
         <h2>アイテム編集</h2>
           <div class="input-data">
             <div class="category item-input">
-              <input type="text" id="input-category">
+              <input type="text" id="input-category" data-prop="category">
+              <p id="category-message" style="color:red;"></p>
             </div>
             <div class="name item-input">
-              <input type="text" id="input-name">
+              <input type="text" id="input-name" data-prop="name">
+              <p id="name-message" style="color:red;"></p>
             </div>
             <div class="manufacturer item-input">
-              <input type="text" id="input-manufacturer" >
+              <input type="text" id="input-manufacturer" data-prop="manufacturer">
+              <p id="manufacturer-message" style="color:red;"></p>
             </div>
             <div class="releaseDate item-input">
-              <input type="text" id="input-releaseDate">
+              <input type="text" id="input-releaseDate" data-prop="releaseDate">
+              <p id="releaseDate-message" style="color:red;"></p>
             </div>
             <div class="price item-input">
-              <input type="text" id="input-price">
-            </div>
+              <input type="number" id="input-price" data-prop="price">
+              <p id="price-message" style="color:red;"></p>
+            </div> 
           </div>
           <button id="update-btn">更新</button>
       </div>  
@@ -46,6 +51,7 @@
     <p class="copyright">&copy; 2022 Item Manager </p>
   </footer>
   <script src="./js/common.js"></script>
+  <script src="./js/validate.js"></script>
   <script src="./js/edit.js"></script>
 </body>
 </html>

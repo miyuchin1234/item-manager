@@ -12,7 +12,6 @@ const inputManufacturer = document.getElementById('input-manufacturer');
 const inputReleaseDate = document.getElementById('input-releaseDate');
 const inputPrice = document.getElementById('input-price');
 const updateBtn = document.getElementById('update-btn');
-const inputItems = document.querySelectorAll('input[type="text"]');
 
 const initPage = () => {
   loadAllItems();
@@ -30,14 +29,35 @@ const initPage = () => {
 };
 initPage();
 
-inputItems.forEach((input) => {
-  input.addEventListener('change', (e) => {
-    const id = input.id;
-    const prop = id.replace('input-', '');
-    updatedItem[prop] = e.target.value;
-  });
+document.addEventListener('change',(e) => {
+  const prop = e.target.getAttribute('data-prop');
+  if (prop === 'price') {
+    updatedItem[prop] = parseInt(e.target.value)
+  } else {
+    updatedItem[prop] = e.target.value
+  }
+  console.log('== updatedItem ====',updatedItem);
 });
 
+const updateItem = (item) => {
+  if (validate(item, updateRules)) {
+    console.log('更新成功')
+    for(let i = 0; i < allItems.length; i++){
+      if (allItems[i].sku === item.sku) {
+        allItems[i] = item
+      }
+    }
+    console.log('=== updated item ===', item);
+    console.log('=== allItems ===', allItems);
+    saveAllItems();
+    alert('商品を更新しました。')
+  } else {
+    alert('入力に不備があります。')
+  }
+}
+
 updateBtn.addEventListener('click', () => {
-  saveAllItems();
+  updateItem(updatedItem);
 });
+
+
